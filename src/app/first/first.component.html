@@ -1,0 +1,22 @@
+<body>
+   <h1>{{title}}</h1>
+
+   <app-search></app-search>
+   <br>
+   <br>
+   
+    <span *ngIf="errorJson">Error occured: {{errorJson.message}}</span>
+    <ul>
+        <li *ngFor="let specie of myTable">{{specie.commonName}}&nbsp;&nbsp;
+            <a [routerLink]="['/details/' + specie.id]" routerLinkActive="router-link-active">more details</a>&nbsp;&nbsp;
+            <button (click)="delete(specie)">Delete</button>
+            
+
+        </li>
+    </ul>
+<br>
+<br>
+<br>
+<button (click)="createSpecie()">New specie</button>
+
+</body>

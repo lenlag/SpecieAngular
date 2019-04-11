@@ -1,0 +1,16 @@
+<body>
+  <h1>{{title}}</h1>
+ 
+<span>id: </span>&nbsp;&nbsp;<span *ngIf="mySpecie">{{mySpecie.id}}</span>
+<br>
+<span>common name: </span>&nbsp;&nbsp;<span *ngIf="mySpecie">{{mySpecie.commonName}}</span>
+<br>
+<span>latin name: </span>&nbsp;&nbsp;<span *ngIf="mySpecie">{{mySpecie.latinName}}</span>
+<!--*ngIf, car si l'objet est bien charg�, on peut le charger en html-->
+<br>
+<br>
+<br>
+<button (click)="goBack()">Back</button>&nbsp;&nbsp;
+<button (click)="modify(mySpecie.id)">Modify</button>
+
+</body>

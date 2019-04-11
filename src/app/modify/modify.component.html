@@ -1,0 +1,14 @@
+<body>
+  <h1>{{title}}</h1>
+ 
+<span>common name: </span>&nbsp;&nbsp;<input [(ngModel)] = "specie.commonName" *ngIf="specie">
+<br>
+<br>
+<span>latin name: </span>&nbsp;&nbsp;<input [(ngModel)] = "specie.latinName" *ngIf="specie">
+<br>
+<br>
+<br>
+<button (click)="cancel()">Cancel</button>&nbsp;&nbsp;
+<button (click)="submit()">Submit</button>
+
+</body>

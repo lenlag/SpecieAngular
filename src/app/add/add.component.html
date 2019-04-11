@@ -1,0 +1,20 @@
+<body>
+    <h1>{{title}}</h1>
+  <span>Common Name : </span><input #commonName placeholder="Enter common name">
+  <br>
+  <br>
+  <span>Latin Name : </span><input #latinName placeholder="Enter latin name">
+
+  <br>
+  <br>
+  <br>
+  <button (click)="addSpecie(commonName.value, latinName.value)">Save</button>&nbsp;&nbsp;
+  <button (click)="cancel()">Cancel</button>
+  <!-- (click) passes input value to add() -->
+  <br>
+  <br>
+
+  <span *ngIf="specieJson">Value returned by observable: {{specieJson}}</span>
+  <span *ngIf="errorJson">ERROR OCCURED: {{errorJson}}</span>
+
+</body>
